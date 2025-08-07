@@ -47,6 +47,7 @@ textarea {
 }
 
 button {
+  font-family: 'Segoe UI', sans-serif;
   padding: 12px;
   background: linear-gradient(135deg, #6a5acd, #805ad5);
   color: white;
