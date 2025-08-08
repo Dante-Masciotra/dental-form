@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>OD Progress Note</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -9,9 +10,9 @@
   <div class="container">
     <h2>OD Progress Note</h2>
 
-    <!-- Procedure Codes with Status -->
     <label>Procedure Codes & Status</label>
     <div class="code-status-group">
+      
       <div>
         <span>D0100</span>
         <select id="D0100">
@@ -67,33 +68,31 @@
         </select>
       </div>
     </div>
+    <button type="button" id="completeAllCodes">Mark All Completed Today</button>
+    
+    <label>Vitals</label>
+    <input type="text" id="vitals" placeholder="BP: 120/80mmHg, Pulse: 80bpm">
 
-    <!-- Vitals -->
-    <label for="vitals">Vitals</label>
-    <input type="text" id="vitals" placeholder="BP: 120/80mmHg, Pulse: 80bpm, etc.">
-
-    <!-- Procedures Checklist -->
     <label>Procedures Completed</label>
+    <label><input type="checkbox" id="selectAllProcedures"> Select All</label>
     <div class="checkbox-group">
       <label><input type="checkbox" value="Health history recorded"> Health history recorded</label>
       <label><input type="checkbox" value="Dental history recorded"> Dental history recorded</label>
       <label><input type="checkbox" value="Medications recorded"> Medications recorded</label>
-      <label><input type="checkbox" value="EO & IO findings completed"> EO & IO findings completed</label>
+      <label><input type="checkbox" value="EO & IO findings"> EO & IO findings</label>
       <label><input type="checkbox" value="Odontogram completed"> Odontogram completed</label>
       <label><input type="checkbox" value="Perio charting completed"> Perio charting completed</label>
       <label><input type="checkbox" value="Perio evaluation completed"> Perio evaluation completed</label>
       <label><input type="checkbox" value="Caries risk assessment completed"> Caries risk assessment completed</label>
     </div>
 
-    <!-- Treatment Options explained checkbox -->
-    <label><input type="checkbox" id="treatmentExplained"> Treatment options explained to the patient</label>
+    <label><input type="checkbox" id="treatmentExplained"> Treatment options explained to patient</label>
+    <label><input type="checkbox" id="signedPlan"> Patient signed treatment plan & diagnostic summary</label>
 
-    <!-- Next Visit -->
-    <label for="nextVisit">Next Visit</label>
-    <input type="text" id="nextVisit" placeholder="perio">
+    <label>Next Visit</label>
+    <input type="text" id="nextVisit" placeholder="e.g. Perio">
 
-    <!-- Save Button -->
-    <button onclick="saveNote()">Save as .txt</button>
+    <button onclick="saveNote()">Save as TXT</button>
   </div>
 
   <script src="script.js"></script>
