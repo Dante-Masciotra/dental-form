@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>OD Progress Note</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container">
@@ -12,7 +12,7 @@
 
     <label>Procedure Codes & Status</label>
     <div class="code-status-group">
-      
+
       <div>
         <span>D0100</span>
         <select id="D0100">
@@ -69,28 +69,52 @@
       </div>
     </div>
     <button type="button" id="completeAllCodes">Mark All Completed Today</button>
-    
+
     <label>Vitals</label>
-    <input type="text" id="vitals" placeholder="BP: 120/80mmHg, Pulse: 80bpm">
+    <input type="text" id="vitals" placeholder="BP: 120/80mmHg, Pulse: 80bpm" />
 
     <label>Procedures Completed</label>
-    <label><input type="checkbox" id="selectAllProcedures"> Select All</label>
-    <div class="checkbox-group">
-      <label><input type="checkbox" value="Health history recorded"> Health history recorded</label>
-      <label><input type="checkbox" value="Dental history recorded"> Dental history recorded</label>
-      <label><input type="checkbox" value="Medications recorded"> Medications recorded</label>
-      <label><input type="checkbox" value="EO & IO findings"> EO & IO findings</label>
-      <label><input type="checkbox" value="Odontogram completed"> Odontogram completed</label>
-      <label><input type="checkbox" value="Perio charting completed"> Perio charting completed</label>
-      <label><input type="checkbox" value="Perio evaluation completed"> Perio evaluation completed</label>
-      <label><input type="checkbox" value="Caries risk assessment completed"> Caries risk assessment completed</label>
+    <label><input type="checkbox" id="selectAllProcedures" /> Select All</label>
+    <div class="checkbox-group procedures">
+      <label><input type="checkbox" value="Health history recorded" /> Health history recorded</label>
+      <label><input type="checkbox" value="Dental history recorded" /> Dental history recorded</label>
+      <label><input type="checkbox" value="Medications recorded" /> Medications recorded</label>
+      <label><input type="checkbox" value="EO & IO findings" /> EO & IO findings</label>
+      <label><input type="checkbox" value="Odontogram completed" /> Odontogram completed</label>
+      <label><input type="checkbox" value="Perio charting completed" /> Perio charting completed</label>
+      <label><input type="checkbox" value="Perio evaluation completed" /> Perio evaluation completed</label>
+      <label><input type="checkbox" value="Caries risk assessment completed" /> Caries risk assessment completed</label>
     </div>
 
-    <label><input type="checkbox" id="treatmentExplained"> Treatment options explained to patient</label>
-    <label><input type="checkbox" id="signedPlan"> Patient signed treatment plan & diagnostic summary</label>
+    <label>Treatment Options</label>
+    <label><input type="checkbox" id="selectAllTreatment" /> Select All</label>
+    <div class="checkbox-group treatment">
+      <label><input type="checkbox" value="Prophy" /> Prophy</label>
+      <label><input type="checkbox" value="SRP" /> SRP</label>
+      <label><input type="checkbox" value="Fillings" /> Fillings</label>
+      <label><input type="checkbox" value="Crowns" /> Crowns</label>
+      <label><input type="checkbox" value="RCT" /> RCT</label>
+      <label><input type="checkbox" value="Dentures (CD/CD, RPD/RPD, CD/RPD)" /> Dentures (CD/CD, RPD/RPD, CD/RPD)</label>
+      <label><input type="checkbox" value="Implants" /> Implants</label>
+      <label><input type="checkbox" value="Bridges" /> Bridges</label>
+      <label><input type="checkbox" value="Extractions" /> Extractions</label>
+    </div>
 
     <label>Next Visit</label>
-    <input type="text" id="nextVisit" placeholder="e.g. Perio">
+    <label><input type="checkbox" id="selectAllNextVisit" /> Select All</label>
+    <div class="checkbox-group nextvisit">
+      <label><input type="checkbox" value="Perio: Prophy" /> Perio: Prophy</label>
+      <label><input type="checkbox" value="Perio: SRP" /> Perio: SRP</label>
+      <label><input type="checkbox" value="Resto: Fillings" /> Resto: Fillings</label>
+      <label><input type="checkbox" value="Resto: Crowns" /> Resto: Crowns</label>
+      <label><input type="checkbox" value="Resto: RCT" /> Resto: RCT</label>
+      <label><input type="checkbox" value="Prost: Dentures (CD/CD, RPD/RPD, CD/RPD)" /> Prost: Dentures (CD/CD, RPD/RPD, CD/RPD)</label>
+      <label><input type="checkbox" value="Prost: Implants" /> Prost: Implants</label>
+      <label><input type="checkbox" value="Prost: Bridges" /> Prost: Bridges</label>
+      <label><input type="checkbox" value="OS: Extractions" /> OS: Extractions</label>
+    </div>
+
+    <label><input type="checkbox" id="signedPlan" /> Patient signed treatment plan & diagnostic summary</label>
 
     <button onclick="saveNote()">Save as TXT</button>
   </div>
