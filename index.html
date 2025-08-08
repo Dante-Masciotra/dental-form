@@ -2,19 +2,100 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dental Form to txt</title>
+  <title>OD Progress Note</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <div class="container">
-    <h1>Submit Info</h1>
-    <input type="text" id="name" placeholder="Name">
-    <input type="email" id="email" placeholder="Email">
-    <input type="number" id="age" placeholder="Age">
-    <input type="text" id="color" placeholder="Favorite Color">
-    <textarea id="comments" placeholder="Comments"></textarea>
-    <button onclick="saveForm()">Save as .txt</button>
+    <h2>OD Progress Note</h2>
+
+    <!-- Procedure Codes with Status -->
+    <label>Procedure Codes & Status</label>
+    <div class="code-status-group">
+      <div>
+        <span>D0100</span>
+        <select id="D0100">
+          <option value="">--Select--</option>
+          <option>Planned</option>
+          <option>In Progress</option>
+          <option>Completed Today</option>
+        </select>
+      </div>
+      <div>
+        <span>D0150</span>
+        <select id="D0150">
+          <option value="">--Select--</option>
+          <option>Planned</option>
+          <option>In Progress</option>
+          <option>Completed Today</option>
+        </select>
+      </div>
+      <div>
+        <span>D0151</span>
+        <select id="D0151">
+          <option value="">--Select--</option>
+          <option>Planned</option>
+          <option>In Progress</option>
+          <option>Completed Today</option>
+        </select>
+      </div>
+      <div>
+        <span>D0152</span>
+        <select id="D0152">
+          <option value="">--Select--</option>
+          <option>Planned</option>
+          <option>In Progress</option>
+          <option>Completed Today</option>
+        </select>
+      </div>
+      <div>
+        <span>D0003.A</span>
+        <select id="D0003A">
+          <option value="">--Select--</option>
+          <option>Planned</option>
+          <option>In Progress</option>
+          <option>Completed Today</option>
+        </select>
+      </div>
+      <div>
+        <span>D0603</span>
+        <select id="D0603">
+          <option value="">--Select--</option>
+          <option>Planned</option>
+          <option>In Progress</option>
+          <option>Completed Today</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Vitals -->
+    <label for="vitals">Vitals</label>
+    <input type="text" id="vitals" placeholder="BP: 120/80mmHg, Pulse: 80bpm, etc.">
+
+    <!-- Procedures Checklist -->
+    <label>Procedures Completed</label>
+    <div class="checkbox-group">
+      <label><input type="checkbox" value="Health history recorded"> Health history recorded</label>
+      <label><input type="checkbox" value="Dental history recorded"> Dental history recorded</label>
+      <label><input type="checkbox" value="Medications recorded"> Medications recorded</label>
+      <label><input type="checkbox" value="EO & IO findings completed"> EO & IO findings completed</label>
+      <label><input type="checkbox" value="Odontogram completed"> Odontogram completed</label>
+      <label><input type="checkbox" value="Perio charting completed"> Perio charting completed</label>
+      <label><input type="checkbox" value="Perio evaluation completed"> Perio evaluation completed</label>
+      <label><input type="checkbox" value="Caries risk assessment completed"> Caries risk assessment completed</label>
+    </div>
+
+    <!-- Treatment Options explained checkbox -->
+    <label><input type="checkbox" id="treatmentExplained"> Treatment options explained to the patient</label>
+
+    <!-- Next Visit -->
+    <label for="nextVisit">Next Visit</label>
+    <input type="text" id="nextVisit" placeholder="perio">
+
+    <!-- Save Button -->
+    <button onclick="saveNote()">Save as .txt</button>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
