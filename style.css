@@ -1,11 +1,17 @@
+/* Apply border-box sizing globally */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', sans-serif;
   background: linear-gradient(135deg, #1a0033, #2e004f);
-  display: flex;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
   margin: 0;
+  padding-top: 20px; /* keep some top padding for spacing */
+  /* Remove fixed height and flex centering so page scrolls naturally */
+  /* display, height, justify-content, align-items removed */
 }
 
 .container {
@@ -14,6 +20,7 @@ body {
   border-radius: 12px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
   width: 400px;
+  margin: 0 auto 40px auto; /* center horizontally, add bottom margin for scroll */
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -21,6 +28,8 @@ body {
 }
 
 h2 {
+  margin-top: 0;
+  padding-top: 10px;
   text-align: center;
 }
 
